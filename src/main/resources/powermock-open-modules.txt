@@ -1,0 +1,5 @@
+java.base
+java.logging
+java.sql
+java.management
+java.desktop
