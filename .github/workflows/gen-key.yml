@@ -8,7 +8,7 @@
           Name-Real: Your Name
           Name-Email: your-email@example.com
           Expire-Date: 0
-          Passphrase: YOUR_PASSPHRASE_HERE
+          Passphrase: changeit
           %commit
           EOF
           
