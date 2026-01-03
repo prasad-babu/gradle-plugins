@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.dpb.plugins"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -24,6 +24,7 @@ gradlePlugin {
             implementationClass = "com.dpb.gradle.plugin.PowermockOpensPlugin"
             displayName = "Powermock Opens"
             description = "Powermock Opens plugin to relax java restricted modules for powermock unit tests"
+            tags = listOf("powermock", "opens", "java", "restricted")
         }
     }
 }
