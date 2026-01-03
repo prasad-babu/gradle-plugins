@@ -13,6 +13,21 @@ When running PowerMock tests on Java 9 and later, you often encounter `IllegalAc
 
 The plugin creates an argument file (`gbuild/powermock-open-modules.argfile`) containing all necessary `--add-opens` directives, eliminating the need to manually configure JVM arguments for PowerMock tests.
 
+### Why This Plugin?
+
+This plugin is **especially valuable for legacy Java projects** with extensive PowerMock-based unit test suites. When migrating such projects to Java 9+ (particularly Java 21), you would typically need to:
+
+- Manually identify which modules and packages PowerMock needs access to
+- Add dozens or hundreds of `--add-opens` arguments to your test configuration
+- Maintain this configuration as your codebase evolves
+
+For large codebases with thousands of PowerMock tests, this manual process is error-prone and time-consuming. This plugin **automates the entire process**, allowing you to:
+
+- Migrate legacy projects to modern Java versions without rewriting tests
+- Avoid the massive effort of refactoring PowerMock tests to Mockito or other frameworks
+- Keep your existing test suite running with minimal configuration changes
+- Focus on business logic rather than JVM module system compatibility
+
 ## Installation
 
 ### Using the Gradle Plugin Portal
