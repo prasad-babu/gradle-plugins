@@ -120,7 +120,19 @@ To publish a new version of this plugin:
 
 ## License
 
-See LICENSE file for details.
+This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file for details.
+
+### What This Means
+
+The Apache License 2.0 is a permissive free software license that allows you to:
+
+- ✅ **Use** the plugin freely for personal, commercial, or enterprise projects
+- ✅ **Modify** the source code to suit your needs
+- ✅ **Distribute** the plugin or modified versions
+- ✅ **Sublicense** under compatible terms
+- ✅ **Use in proprietary software** without restrictions
+
+**No warranty** is provided, and contributors are not liable for any damages. See the LICENSE file for complete terms and conditions.
 
 ## Repository
 
