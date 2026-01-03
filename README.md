@@ -30,7 +30,7 @@ For large codebases with thousands of PowerMock tests, this manual process is er
 
 ## Installation
 
-### Using the Gradle Plugin Portal
+### Using Gradle Plugin Portal
 
 Add the plugin to your `build.gradle.kts`:
 
@@ -48,18 +48,7 @@ plugins {
 }
 ```
 
-### Manual Installation
-
-If publishing locally, add to your `settings.gradle.kts`:
-
-```kotlin
-pluginManagement {
-    repositories {
-        mavenLocal()
-        gradlePluginPortal()
-    }
-}
-```
+The plugin will be automatically resolved from the [Gradle Plugin Portal](https://plugins.gradle.org/).
 
 ## Usage
 
@@ -112,11 +101,22 @@ This file is automatically referenced by your test tasks via the `@` argument fi
 ./gradlew build
 ```
 
-## Publishing
+## Publishing to Gradle Plugin Portal
 
-```bash
-./gradlew publishPlugins
-```
+To publish a new version of this plugin:
+
+1. Set your Gradle Plugin Portal credentials in `~/.gradle/gradle.properties`:
+   ```properties
+   gradle.publish.key=YOUR_API_KEY
+   gradle.publish.secret=YOUR_API_SECRET
+   ```
+
+2. Publish the plugin:
+   ```bash
+   ./gradlew publishPlugins
+   ```
+
+3. The plugin will be available on the [Gradle Plugin Portal](https://plugins.gradle.org/) within a few minutes.
 
 ## License
 
