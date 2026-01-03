@@ -36,7 +36,7 @@ Add the plugin to your `build.gradle.kts`:
 
 ```kotlin
 plugins {
-    id("com.dpb.plugins.powermock-opens") version "1.0"
+    id("io.github.prasad-babu.powermock-opens") version "1.0"
 }
 ```
 
@@ -44,7 +44,7 @@ Or in `build.gradle`:
 
 ```groovy
 plugins {
-    id 'com.dpb.plugins.powermock-opens' version '1.0'
+    id 'io.github.prasad-babu.powermock-opens' version '1.0'
 }
 ```
 
@@ -57,7 +57,7 @@ Once applied, the plugin automatically configures all test tasks. No additional 
 ```kotlin
 plugins {
     java
-    id("com.dpb.plugins.powermock-opens") version "1.0"
+    id("io.github.prasad-babu.powermock-opens") version "1.0"
 }
 ```
 

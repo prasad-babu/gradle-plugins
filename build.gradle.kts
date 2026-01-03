@@ -4,7 +4,7 @@ plugins {
     id("com.gradle.plugin-publish") version "2.0.0"
 }
 
-group = "com.dpb.plugins"
+group = "io.github.prasad-babu"
 version = "1.0"
 
 repositories {
@@ -20,7 +20,7 @@ gradlePlugin {
     vcsUrl = "https://github.com/prasad-babu/gradle-plugins.git"
     plugins {
         register("powermockOpens") {
-            id = "com.dpb.plugins.powermock-opens"
+            id = "io.github.prasad-babu.powermock-opens"
             implementationClass = "com.dpb.gradle.plugin.PowermockOpensPlugin"
             displayName = "Powermock Opens"
             description = "Powermock Opens plugin to relax java restricted modules for powermock unit tests"
