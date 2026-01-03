@@ -1,12 +1,19 @@
-- name: Generate Key
+name: Generate GPG Key
+on: workflow_dispatch # You trigger this manually from the "Actions" tab
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Key
         run: |
           gpg --batch --full-generate-key <<EOF
           Key-Type: RSA
           Key-Length: 4096
           Subkey-Type: RSA
           Subkey-Length: 4096
-          Name-Real: Your Name
-          Name-Email: your-email@example.com
+          Name-Real: prasadbabu
+          Name-Email:dpbabu@gmail.com
           Expire-Date: 0
           Passphrase: changeit
           %commit
