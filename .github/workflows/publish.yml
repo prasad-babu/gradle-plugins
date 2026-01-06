@@ -19,7 +19,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Publish to Maven Central
-        run: gradlew publish
+        run: gradle publish
         env:
           GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
