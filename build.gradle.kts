@@ -5,8 +5,8 @@ plugins {
     id("com.vanniktech.maven.publish") version "0.35.0"
 }
 
-group = property("GROUP")!!
-version = property("VERSION_NAME")!!
+group = property("GROUP") as String
+version = property("VERSION_NAME") as String
 
 repositories {
     mavenCentral()
@@ -27,7 +27,7 @@ gradlePlugin {
     vcsUrl = "https://github.com/prasad-babu/gradle-plugins.git"
     plugins {
         register("powermockOpens") {
-            id = "io.github.prasad-babu.gradle-powermock-opens"
+            id = "io.github.prasad-babu.powermock-opens"
             implementationClass = "io.github.prasad_babu.gradle.plugin.PowermockOpensPlugin"
             displayName = "Powermock Opens"
             description = "Powermock Opens plugin to relax java restricted modules for powermock unit tests"
