@@ -1,5 +1,4 @@
 plugins {
-    `kotlin-dsl`
     kotlin("jvm") version "2.0.21"
     `java-gradle-plugin`
     id("com.vanniktech.maven.publish") version "0.35.0"

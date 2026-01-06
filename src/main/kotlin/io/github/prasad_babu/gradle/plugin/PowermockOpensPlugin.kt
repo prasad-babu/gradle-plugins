@@ -53,7 +53,7 @@ class PowermockOpensPlugin : Plugin<Project> {
         val powermockOpens = PowermockOpens(argFile)
         project.plugins.withType(JavaPlugin::class.java) {
             project.tasks.withType(Test::class.java).configureEach {
-                jvmArgs(powermockOpens.getJvmArgs())
+                it.jvmArgs(powermockOpens.getJvmArgs())
             }
         }
     }
