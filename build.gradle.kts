@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.prasad-babu.gradle.plugin"
-version = "1.1.0"
+version = "1.2"
 
 repositories {
     mavenCentral()
