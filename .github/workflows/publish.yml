@@ -18,8 +18,11 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x gradlew
 
+      - name: Gradle Clean
+        run: gradle clean
+
       - name: Publish to Maven Central
-        run: clean publish --no-daemon
+        run: gradle publish --no-daemon
         env:
           GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
