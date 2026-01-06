@@ -5,8 +5,8 @@ plugins {
     id("com.vanniktech.maven.publish") version "0.35.0"
 }
 
-group = "io.github.prasad-babu"
-version = "1.1"
+group = "io.github.prasad-babu.gradle.plugin"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
