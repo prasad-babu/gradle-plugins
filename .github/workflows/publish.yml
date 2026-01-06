@@ -15,9 +15,11 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
       - name: Publish to Maven Central
-        # We call 'sh' directly so the 'x' permission doesn't matter
-        run: gradle publish
+        run: gradlew publish
         env:
           GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
