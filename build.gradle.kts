@@ -17,6 +17,19 @@ dependencies {
 }
 
 publishing {
+    repositories {
+        maven {
+            name = "MavenCentral"
+            // Use this URL for the modern Sonatype Central Portal
+            url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
+            }
+        }
+    }
+
     publications.withType<MavenPublication> {
         pom {
             name.set("Powermock Opens")

@@ -22,7 +22,7 @@ jobs:
         run: gradle clean
 
       - name: Publish to Maven Central
-        run: gradle publish --no-daemon
+        run: gradle publishAllPublicationsToMavenCentralRepository --no-daemon
         env:
           GPG_SIGNING_KEY: ${{ secrets.GPG_SIGNING_KEY }}
           GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
