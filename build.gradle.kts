@@ -21,7 +21,7 @@ gradlePlugin {
     plugins {
         register("powermockOpens") {
             id = "io.github.prasad-babu.powermock-opens"
-            implementationClass = "com.dpb.gradle.plugin.PowermockOpensPlugin"
+            implementationClass = "io.github.prasad_babu.gradle.plugin.PowermockOpensPlugin"
             displayName = "Powermock Opens"
             description = "Powermock Opens plugin to relax java restricted modules for powermock unit tests"
             tags = listOf("powermock", "opens", "java", "restricted")

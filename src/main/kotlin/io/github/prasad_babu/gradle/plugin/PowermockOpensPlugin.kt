@@ -1,4 +1,4 @@
-package com.dpb.gradle.plugin
+package io.github.prasad_babu.gradle.plugin
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
