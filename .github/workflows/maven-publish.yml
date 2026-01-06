@@ -27,7 +27,7 @@ jobs:
         run: ./gradlew clean
 
       - name: Publish to Maven Central
-        run: ./gradlew publishAllPublicationsToMavenCentral closeAndReleaseMavenCentralStagingRepository
+        run: ./gradlew publishToMavenCentral
         env:
           ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.GPG_PRIVATE_KEY }}
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.GPG_PASSPHRASE }}
