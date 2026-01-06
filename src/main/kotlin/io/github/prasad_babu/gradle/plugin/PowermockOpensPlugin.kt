@@ -16,7 +16,9 @@ class PowermockOpensPlugin : Plugin<Project> {
         val args = LinkedHashSet<String>()
         for (module in modules) {
             val modFile = File(jmods, "$module.jmod")
-            if (!modFile.exists()) continue
+            if (!modFile.exists()) {
+                continue
+            }
 
             JarFile(modFile).use { jar ->
                 val entries = jar.entries()
