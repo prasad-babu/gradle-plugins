@@ -20,6 +20,12 @@ jobs:
           distribution: temurin
           java-version: 21
 
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Gradle clean
+        run: ./gradlew clean
+
       - name: Publish to Maven Central
         run: ./gradlew publishAllPublicationsToMavenCentral closeAndReleaseMavenCentralStagingRepository
         env:
