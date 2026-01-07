@@ -30,25 +30,57 @@ For large codebases with thousands of PowerMock tests, this manual process is er
 
 ## Installation
 
-### Using Gradle Plugin Portal
+### Using Maven Central
 
-Add the plugin to your `build.gradle.kts`:
+Since this plugin is published to Maven Central (not the Gradle Plugin Portal), you need to configure `pluginManagement` in your `settings.gradle.kts` or `settings.gradle` file.
+
+#### Kotlin DSL (`settings.gradle.kts`)
+
+**Step 1:** Add `pluginManagement` to your `settings.gradle.kts` (must be at the top of the file):
+
+```kotlin
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = "your-project-name"
+```
+
+**Step 2:** Add the plugin to your `build.gradle.kts`:
 
 ```kotlin
 plugins {
-    id("io.github.prasad-babu.powermock-opens") version "1.0"
+    id("io.github.prasad-babu.powermock-opens") version "1.2.3"
 }
 ```
 
-Or in `build.gradle`:
+#### Groovy DSL (`settings.gradle`)
+
+**Step 1:** Add `pluginManagement` to your `settings.gradle` (must be at the top of the file):
+
+```groovy
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'your-project-name'
+```
+
+**Step 2:** Add the plugin to your `build.gradle`:
 
 ```groovy
 plugins {
-    id 'io.github.prasad-babu.powermock-opens' version '1.0'
+    id 'io.github.prasad-babu.powermock-opens' version '1.2.3'
 }
 ```
 
-The plugin will be automatically resolved from the [Gradle Plugin Portal](https://plugins.gradle.org/).
+**Important:** The `pluginManagement` block must be at the top of your `settings.gradle.kts`/`settings.gradle` file, before any other configuration.
 
 ## Usage
 
@@ -57,7 +89,7 @@ Once applied, the plugin automatically configures all test tasks. No additional 
 ```kotlin
 plugins {
     java
-    id("io.github.prasad-babu.powermock-opens") version "1.0"
+    id("io.github.prasad-babu.powermock-opens") version "1.2.3"
 }
 ```
 
@@ -94,29 +126,6 @@ This file is automatically referenced by your test tasks via the `@` argument fi
 4. Generates `--add-opens=<module>/<package>=ALL-UNNAMED` arguments
 5. Writes these to an argument file
 6. Configures all test tasks to use this argument file via `jvmArgs`
-
-## Building from Source
-
-```bash
-./gradlew build
-```
-
-## Publishing to Gradle Plugin Portal
-
-To publish a new version of this plugin:
-
-1. Set your Gradle Plugin Portal credentials in `~/.gradle/gradle.properties`:
-   ```properties
-   gradle.publish.key=YOUR_API_KEY
-   gradle.publish.secret=YOUR_API_SECRET
-   ```
-
-2. Publish the plugin:
-   ```bash
-   ./gradlew publishPlugins
-   ```
-
-3. The plugin will be available on the [Gradle Plugin Portal](https://plugins.gradle.org/) within a few minutes.
 
 ## License
 
