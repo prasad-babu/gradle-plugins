@@ -85,6 +85,7 @@ plugins {
 ## Usage
 
 Once applied, the plugin automatically configures all test tasks. No additional configuration is required.
+If subprojects/modules present, apply the plugin to all subprojects/module
 
 ```kotlin
 plugins {
@@ -142,7 +143,3 @@ The Apache License 2.0 is a permissive free software license that allows you to:
 - ✅ **Use in proprietary software** without restrictions
 
 **No warranty** is provided, and contributors are not liable for any damages. See the LICENSE file for complete terms and conditions.
-
-## Repository
-
-- **GitHub**: [https://github.com/prasad-babu/gradle-plugins](https://github.com/prasad-babu/gradle-plugins)
