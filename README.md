@@ -53,7 +53,7 @@ rootProject.name = "your-project-name"
 
 ```kotlin
 plugins {
-    id("io.github.prasad-babu.powermock-opens") version "1.2.3"
+    id("io.github.prasad-babu.powermock-opens") version "v1.2.3"
 }
 ```
 
@@ -76,7 +76,7 @@ rootProject.name = 'your-project-name'
 
 ```groovy
 plugins {
-    id 'io.github.prasad-babu.powermock-opens' version '1.2.3'
+    id 'io.github.prasad-babu.powermock-opens' version 'v1.2.3'
 }
 ```
 
@@ -90,7 +90,7 @@ If subprojects/modules present, apply the plugin to all subprojects/module
 ```kotlin
 plugins {
     java
-    id("io.github.prasad-babu.powermock-opens") version "1.2.3"
+    id("io.github.prasad-babu.powermock-opens") version "v1.2.3"
 }
 ```
 
